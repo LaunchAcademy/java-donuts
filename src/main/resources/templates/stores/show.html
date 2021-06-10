@@ -1,0 +1,10 @@
+<html
+  xmlns:th="https://www.thymeleaf.org"
+  th:replace="~{fragments/layout :: layout (~{::body})}"
+>
+  <body>
+    <div class="store" th:object="${store}">
+      <h1 th:text="*{name}">Store Show</h1>
+    </div>
+  </body>
+</html>
