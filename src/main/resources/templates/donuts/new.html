@@ -1,5 +1,7 @@
-<html xmlns:th="https://www.thymeleaf.org"
-      th:replace="~{fragments/layout :: layout (~{::body})}">
+<html
+  xmlns:th="https://www.thymeleaf.org"
+  th:replace="~{fragments/layout :: layout (~{::body})}"
+>
   <body>
     <h1>Add a New Donut</h1>
 
@@ -13,12 +15,15 @@
         <input type="text" th:field="*{description}" />
       </div>
       <div>
-        <p>Vegan:
-          <label>Yes
-            <input type="radio" th:field="*{vegan}" value="true">
+        <p>
+          Vegan:
+          <label
+            >Yes
+            <input type="radio" th:field="*{vegan}" value="true" />
           </label>
-          <label>No
-            <input type="radio" th:field="*{vegan}" value="false">
+          <label
+            >No
+            <input type="radio" th:field="*{vegan}" value="false" />
           </label>
         </p>
       </div>

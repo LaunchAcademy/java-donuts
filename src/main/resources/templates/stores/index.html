@@ -1,0 +1,16 @@
+<html
+  xmlns:th="https://www.thymeleaf.org"
+  th:replace="~{fragments/layout :: layout (~{::body})}"
+>
+  <body>
+    <h1>Stores Index</h1>
+
+    <ul>
+      <div class="stores" th:each="store : ${stores}">
+        <div class="store" th:object="${store}">
+          <a th:href="|/stores/*{id}|" th:text="*{name}"></a>
+        </div>
+      </div>
+    </ul>
+  </body>
+</html>
